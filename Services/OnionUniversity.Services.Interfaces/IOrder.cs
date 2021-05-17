@@ -1,10 +1,10 @@
-﻿using OnionUniversity.Domain.Core;
+﻿using OnionUniversity.Infrastructure.Data;
 using System;
 
 namespace OnionUniversity.Services.Interfaces
 {
     public interface IOrder
     {
-        void MakeOrder(Student book);
+        void ThisIsTemplate(Student student);
     }
 }
