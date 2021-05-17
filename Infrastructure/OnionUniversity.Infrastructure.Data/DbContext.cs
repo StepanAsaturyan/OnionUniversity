@@ -2,7 +2,7 @@
 
 namespace OnionUniversity.Infrastructure.Data
 {
-    public class Class1
+    public class DbContext
     {
         
     }
