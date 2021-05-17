@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\OnionUniversity.Domain.Core\OnionUniversity.Domain.Core.csproj" />
+  </ItemGroup>
+
 </Project>

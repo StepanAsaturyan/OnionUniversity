@@ -5,6 +5,6 @@ namespace OnionUniversity.Services.Interfaces
 {
     public interface IOrder
     {
-        void MakeOrder(Book book);
+        void MakeOrder(Student book);
     }
 }
