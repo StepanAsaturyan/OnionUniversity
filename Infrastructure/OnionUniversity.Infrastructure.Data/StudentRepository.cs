@@ -9,7 +9,7 @@ namespace OnionApp.Infrastructure.Data
 {
     public class StudentRepository : IStudentRepository
     {
-        private Task6Context db;
+        private readonly Task6Context db;
 
         public StudentRepository()
         {
