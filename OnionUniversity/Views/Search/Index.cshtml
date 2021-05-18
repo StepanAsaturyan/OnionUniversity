@@ -1,5 +1,19 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Students";
 }
+
+<div class="text-left">
+    <h5>Search students by name</h5>
+</div>
+
+<form action="/search" method="get">
+    <input type="text" name="namePart" value="" />
+    <button type="submit">Find</button>
+    <a href="/Home/Test"></a>
+</form>
+
+<li>
+    @Html.ActionLink("Find", "Index", "Search", new { @class = "elements" }, null)
+</li>
+
+

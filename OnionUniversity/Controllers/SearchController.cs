@@ -20,8 +20,13 @@ namespace OnionUniversity.Controllers
         }
         public IActionResult Index()
         {
-            var students = _repository.GetAllStudentList();
-            
+            return View();
+        }
+
+        public IActionResult Find(string namePart)
+        {
+            var students = _repository.GetStudentListByName(namePart);
+
             return View(students);
         }
     }

@@ -27,6 +27,12 @@ namespace OnionApp.Infrastructure.Data
                               .ToArray();
         }
 
+        public IEnumerable<Student> GetStudentsByGroup(int groupId)
+        {
+            return db.Students.Where(student => student.GroupId.Equals(groupId))
+                              .ToArray();
+        }
+
         public Student GetStudent(int id)
         {
             return db.Students.Find(id);

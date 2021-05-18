@@ -7,7 +7,10 @@ namespace Interfaces
     public interface IStudentRepository : IDisposable
     {
         IEnumerable<Student> GetAllStudentList();
-        IEnumerable<Student> GetStudentListByName(string query);
+        IEnumerable<Student> GetStudentListByName(string namePart);
+        IEnumerable<Student> GetStudentsByGroup(int groupId);
+
+
         Student GetStudent(int id);
         void Create(Student item);
         void Update(Student item);

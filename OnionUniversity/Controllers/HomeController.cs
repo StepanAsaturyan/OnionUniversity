@@ -26,15 +26,19 @@ namespace OnionUniversity.Controllers
 
         public IActionResult Index()
         {
-            var students = _repository.GetAllStudentList();
-            //ViewBag.Students = students;
-            return View(students);
+            return View();
         }
 
         public IActionResult GetStudentsList()
         {
             var students = _repository.GetAllStudentList();
-            //ViewBag.Students = students;
+            return View(students);
+        }
+
+        [HttpGet]
+        public IActionResult GetStudentsByGroup(int groupId)
+        {
+            var students = _repository.GetStudentsByGroup(groupId);
             return View(students);
         }
     }

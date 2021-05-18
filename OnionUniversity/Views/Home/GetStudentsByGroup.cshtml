@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Students";
+}
+
+<div class="text-center">
+
+    <h3 class="display-4">
+         @(Model.Length == 0 ? "Requested group is empty" : $"List of students of group {Model[0].GroupId}")
+    </h3>
+
+    <table>
+        <tr>
+            <td><p>First name</p></td>
+            <td><p>Last name</p></td>
+        </tr>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td><p>@student.FirstName</p></td>
+                <td><p>@student.LastName</p></td>
+            </tr>
+        }
+    </table>
+</div>
