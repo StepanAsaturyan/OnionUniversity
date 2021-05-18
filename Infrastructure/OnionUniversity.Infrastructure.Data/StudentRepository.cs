@@ -16,9 +16,15 @@ namespace OnionApp.Infrastructure.Data
             this.db = new Task6Context();
         }
 
-        public IEnumerable<Student> GetStudentList()
+        public IEnumerable<Student> GetAllStudentList()
         {
             return db.Students.ToList();
+        }
+
+        public IEnumerable<Student> GetStudentListByName(string namePart)
+        {
+            return db.Students.Where(student => student.FirstName.Contains(namePart))
+                              .ToArray();
         }
 
         public Student GetStudent(int id)
@@ -48,18 +54,18 @@ namespace OnionApp.Infrastructure.Data
             db.SaveChanges();
         }
 
-        private bool disposed = false;
+        private bool _disposed = false;
 
         public virtual void Dispose(bool disposing)
         {
-            if (!this.disposed)
+            if (!this._disposed)
             {
                 if (disposing)
                 {
                     db.Dispose();
                 }
             }
-            this.disposed = true;
+            this._disposed = true;
         }
 
         public void Dispose()
@@ -67,5 +73,7 @@ namespace OnionApp.Infrastructure.Data
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        
     }
 }

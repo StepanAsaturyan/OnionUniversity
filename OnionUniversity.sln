@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionUniversity.Services.In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{66A0262E-5C9B-494F-90D6-0179985EBB53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionUniversity.Infrastructure.Data", "Infrastructure\OnionUniversity.Infrastructure.Data\OnionUniversity.Infrastructure.Data.csproj", "{EE9D7755-909D-46E7-90C0-F818B7D4D555}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionUniversity.Infrastructure.Data", "Infrastructure\OnionUniversity.Infrastructure.Data\OnionUniversity.Infrastructure.Data.csproj", "{EE9D7755-909D-46E7-90C0-F818B7D4D555}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,7 +51,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F810DE7E-DB4D-46F5-8836-9F54C107B2F4} = {234D7731-6775-436F-82C7-D73D0E20AE17}
-		{549DE09B-B784-4168-8D29-DF672F30CCC8} = {234D7731-6775-436F-82C7-D73D0E20AE17}
+		{549DE09B-B784-4168-8D29-DF672F30CCC8} = {66A0262E-5C9B-494F-90D6-0179985EBB53}
 		{86070BAA-6911-4C0A-B624-1BADFEE94A49} = {91E68A66-6310-4481-A77C-C466B3F23789}
 		{EE9D7755-909D-46E7-90C0-F818B7D4D555} = {66A0262E-5C9B-494F-90D6-0179985EBB53}
 	EndGlobalSection
