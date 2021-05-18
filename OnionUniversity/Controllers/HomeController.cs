@@ -30,5 +30,12 @@ namespace OnionUniversity.Controllers
             //ViewBag.Students = students;
             return View(students);
         }
+
+        public IActionResult GetStudentsList()
+        {
+            var students = _repository.GetAllStudentList();
+            //ViewBag.Students = students;
+            return View(students);
+        }
     }
 }
