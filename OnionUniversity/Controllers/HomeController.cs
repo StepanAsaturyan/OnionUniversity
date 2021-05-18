@@ -27,7 +27,7 @@ namespace OnionUniversity.Controllers
         public IActionResult Index()
         {
             var students = _repository.GetAllStudentList();
-            ViewBag.Students = students;
+            //ViewBag.Students = students;
             return View(students);
         }
     }

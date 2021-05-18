@@ -10,7 +10,7 @@
             <td><p>Student last name</p></td>
             <td><p>Student group</p></td>
         </tr>
-        @foreach (var student in ViewBag.Students)
+        @foreach (var student in Model)
             {
                 <tr>
                     <td><p>@student.FirstName</p></td>
