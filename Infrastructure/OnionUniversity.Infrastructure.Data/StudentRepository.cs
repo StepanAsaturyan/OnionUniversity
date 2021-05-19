@@ -78,8 +78,6 @@ namespace OnionApp.Infrastructure.Data
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
-
-        
+        }        
     }
 }
