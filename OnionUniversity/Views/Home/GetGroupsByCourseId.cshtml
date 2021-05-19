@@ -5,7 +5,7 @@
 <div class="text-center">
 
     <h3 class="display-4">
-        @($"List of groups of {Model.ToArray()} course:")
+        @($"List of groups of course {Model[0].CourseId}:")
     </h3>
 
     <table>
@@ -17,7 +17,7 @@
         {
             <tr>
                 <td><p>@group.GroupId</p></td>
-                <td><p>@group.Name</p></td>
+                <td><p><a href="/Home/GetStudentsByGroup?groupId=@group.GroupId">@group.Name</a></p></td>
             </tr>
         }
     </table>

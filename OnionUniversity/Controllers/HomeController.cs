@@ -48,7 +48,7 @@ namespace OnionUniversity.Controllers
         [HttpGet]
         public IActionResult GetGroupsByCourseId(int courseId)
         {
-            var groups = _courseRepository.GetGroupsByCourseId(courseId);
+            var groups = _courseRepository.GetGroupsByCourseId(courseId).ToArray();
             return View(groups);
         }
     }

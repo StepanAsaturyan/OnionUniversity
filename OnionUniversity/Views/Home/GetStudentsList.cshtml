@@ -6,17 +6,23 @@
     <h3 class="display-4">List of students of OnionUniversity:</h3>
     <table>
         <tr>
+            <td><p>№</p></td>
             <td><p>First name</p></td>
             <td><p>Last name</p></td>
             <td><p>Group</p></td>
         </tr>
+
+        @{int i = 1;}
+
         @foreach (var student in Model)
-            {
+        {
                 <tr>
+                    <td><p>@i</p></td>
                     <td><p>@student.FirstName</p></td>
                     <td><p>@student.LastName</p></td>
                     <td><p><a href="/Home/GetStudentsByGroup?groupId=@student.GroupId">@student.GroupId</a></p></td>
                 </tr>
-            }
+            i++;
+        }
     </table>
 </div>

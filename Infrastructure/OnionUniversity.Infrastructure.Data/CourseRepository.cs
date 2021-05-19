@@ -23,7 +23,7 @@ namespace OnionUniversity.Infrastructure.Data
 
         public IEnumerable<Group> GetGroupsByCourseId(int courseId)
         {
-            var groups = _db.Groups.Where(g => g.CourseId.Equals(courseId));
+            var groups = _db.Groups.Where(group => group.CourseId.Equals(courseId));
 
             return groups;
         }
