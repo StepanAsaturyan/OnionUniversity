@@ -8,6 +8,7 @@ namespace Interfaces
     public interface ICourseRepository : IDisposable
     {
         IEnumerable<Course> GetAllCourseList();
+        IEnumerable<Group> GetGroupsByCourseId(int courseId);
 
         Course GetCourse(int id);
         void Create(Course item);

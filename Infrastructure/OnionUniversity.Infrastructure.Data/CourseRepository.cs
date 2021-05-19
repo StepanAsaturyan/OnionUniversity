@@ -21,6 +21,13 @@ namespace OnionUniversity.Infrastructure.Data
             return _db.Courses.ToList();
         }
 
+        public IEnumerable<Group> GetGroupsByCourseId(int courseId)
+        {
+            var groups = _db.Groups.Where(g => g.CourseId.Equals(courseId));
+
+            return groups;
+        }
+
         public Course GetCourse(int id)
         {
             return _db.Courses.Find(id);
@@ -72,7 +79,5 @@ namespace OnionUniversity.Infrastructure.Data
         {
             return _db.Groups.Find(id);
         }
-
-        
     }
 }

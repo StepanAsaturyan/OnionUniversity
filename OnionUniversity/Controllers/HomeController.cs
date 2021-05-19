@@ -44,5 +44,12 @@ namespace OnionUniversity.Controllers
             var students = _studRepository.GetStudentsByGroup(groupId);
             return View(students);
         }
+
+        [HttpGet]
+        public IActionResult GetGroupsByCourseId(int courseId)
+        {
+            var groups = _courseRepository.GetGroupsByCourseId(courseId);
+            return View(groups);
+        }
     }
 }

@@ -14,8 +14,8 @@
         {
             <tr>
                 <td><p>@course.CourseId</p></td>
-                <td><p>@course.Name</p></td>
-                <td><p><a href="/Home/GetStudentsByGroup?groupId=@course.Description">@course.Description</a></p></td>
+                <td><p><a href="/Home/GetGroupsByCourseId?courseId=@course.CourseId">@course.Name</a></p></td>
+                <td><p>@course.Description</p></td>
             </tr>
         }
     </table>
