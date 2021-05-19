@@ -9,7 +9,7 @@ namespace Interfaces
     {
         IEnumerable<Course> GetAllCourseList();
 
-        Course GetGroup(int id);
+        Course GetCourse(int id);
         void Create(Course item);
         void Update(Course item);
         void Delete(int id);

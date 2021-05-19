@@ -3,5 +3,20 @@
 }
 
 <div class="text-center">
-    <h2 class="display-4">Welcome to University!</h2>    
+    <h3 class="display-4">List of courses of OnionUniversity:</h3>
+    <table>
+        <tr>
+            <td><p>Id</p></td>
+            <td><p>Name</p></td>
+            <td><p>Description</p></td>
+        </tr>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td><p>@course.CourseId</p></td>
+                <td><p>@course.Name</p></td>
+                <td><p><a href="/Home/GetStudentsByGroup?groupId=@course.Description">@course.Description</a></p></td>
+            </tr>
+        }
+    </table>
 </div>

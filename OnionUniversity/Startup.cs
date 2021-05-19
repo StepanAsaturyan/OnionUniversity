@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnionApp.Infrastructure.Data;
+using OnionUniversity.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace OnionUniversity
         {
             services.AddControllersWithViews();
             services.AddSingleton<IStudentRepository, StudentRepository>();
+            services.AddSingleton<IGroupRepository, GroupRepository>();
+            services.AddSingleton<ICourseRepository, CourseRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

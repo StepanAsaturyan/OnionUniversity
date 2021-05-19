@@ -13,32 +13,35 @@ namespace OnionUniversity.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IStudentRepository _repository;
+        private readonly IStudentRepository _studRepository;
+        private readonly IGroupRepository _groupRepository;
+        private readonly ICourseRepository _courseRepository;
         private readonly Task6Context _db;
 
-        public HomeController(ILogger<HomeController> logger, IStudentRepository repository)
+        public HomeController(IStudentRepository studentRepository, IGroupRepository groupRepository, ICourseRepository courseRepository)
         {
-            _logger = logger;
-            _repository = repository;
+            _studRepository = studentRepository;
+            _groupRepository = groupRepository;
+            _courseRepository = courseRepository;
             _db = new Task6Context();
         }
 
         public IActionResult Index()
         {
-            return View();
+            var courses = _courseRepository.GetAllCourseList();
+            return View(courses);
         }
 
         public IActionResult GetStudentsList()
         {
-            var students = _repository.GetAllStudentList();
+            var students = _studRepository.GetAllStudentList();
             return View(students);
         }
 
         [HttpGet]
         public IActionResult GetStudentsByGroup(int groupId)
         {
-            var students = _repository.GetStudentsByGroup(groupId);
+            var students = _studRepository.GetStudentsByGroup(groupId);
             return View(students);
         }
     }
